@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <script>
+        let sueldo = parseInt(prompt("Ingrese el sueldo del operario:"));
+        let antiguedad = parseInt(prompt("Ingrese los años de antigüedad:"));
+
+        if (sueldo < 500) {
+            if (antiguedad >= 10) {
+                sueldo = sueldo + (sueldo * 0.20);
+                document.write("Nuevo sueldo con aumento del 20%: $" + sueldo + "<br>");
+            } else {
+                sueldo = sueldo + (sueldo * 0.05);
+                document.write("Nuevo sueldo con aumento del 5%: $" + sueldo + "<br>");
+            }
+        } else {
+            document.write("El sueldo no tiene cambios: $" + sueldo + "<br>");
+        }
+    </script>
+</body>
+</html>
