@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Date</title>
+</head>
+<body>
+    <button onclick="mostrarCuatri()">Ver Cuatrimestre</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarCuatri() {
+            let fecha = new Date();
+            let mes = fecha.getMonth() + 1; 
+            let cuatrimestre;
+            if (mes >= 1 && mes <= 4) {
+                cuatrimestre = "Primer Cuatrimestre (Enero - Abril)";
+            } else if (mes >= 5 && mes <= 8) {
+                cuatrimestre = "Segundo Cuatrimestre (Mayo - Agosto)";
+            } else {
+                cuatrimestre = "Tercer Cuatrimestre (Septiembre - Diciembre)";
+            }
+            document.getElementById("resultado").innerText = 
+                "Estamos en el " + cuatrimestre;
+        }
+    </script>
+</body>
+</html>

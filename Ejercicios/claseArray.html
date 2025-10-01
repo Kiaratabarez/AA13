@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio Array</title>
+</head>
+<body>
+<button onclick="procesarVector()">Ingresar Vector</button>
+
+<script>
+function procesarVector() {
+    let vector = [];
+    let sumaTotal = 0;
+    let sumaMayores36 = 0;
+    let cantidadMayores50 = 0;
+
+    for (let i = 0; i < 8; i++) {
+    let num = parseInt(prompt("Ingrese el valor " + (i+1) + ":"));
+    vector.push(num);
+    }
+
+    for (let i = 0; i < vector.length; i++) {
+    let valor = vector[i];
+    sumaTotal += valor;
+    if (valor > 36) {
+        sumaMayores36 += valor;
+    }
+    if (valor > 50) {
+        cantidadMayores50++;
+    }
+    }
+
+    alert("Vector ingresado: " + vector.join(", "));
+    alert("Suma total: " + sumaTotal);
+    alert("Suma de valores mayores a 36: " + sumaMayores36);
+    alert("Cantidad de valores mayores a 50: " + cantidadMayores50);
+}
+</script>
+</body>
+</html>
