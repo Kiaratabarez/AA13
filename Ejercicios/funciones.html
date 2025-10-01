@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Funciones</title>
+</head>
+<body>
+<button onclick="ejerFuncion()">Ejecutar</button>
+
+<script>
+function mostrarRango(menor, mayor) {
+    let resultado = "";
+    for (let i = menor; i <= mayor; i++) {
+    resultado += i + " ";
+    }
+    return resultado;
+}
+
+function ejerFuncion() {
+    let menor = parseInt(prompt("Ingrese el núm menor:"));
+    let mayor = parseInt(prompt("Ingrese el núm mayor:"));
+
+    if (menor > mayor) {
+    alert("El primer núm debe ser menor que el segundo.");
+    } else {
+    let numeros = mostrarRango(menor, mayor);
+    alert("Los números son:\n" + numeros);
+    }
+}
+</script>
+</body>
+</html>

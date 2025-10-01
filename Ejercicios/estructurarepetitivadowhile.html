@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio DoWhile</title>
+</head>
+<body>
+<button onclick="ejercicioDoWhile()">Ejecutar</button>
+<script>
+function ejercicioDoWhile() {
+    let suma = 0;
+    let numero;
+    do {
+    numero = parseInt(prompt("Ingrese un número (9999 para finalizar):"));
+    if (numero !== 9999) {
+        suma += numero; 
+    }
+    } while (numero !== 9999);
+    let mensaje = "Valor acumulado: " + suma + "\n";
+    if (suma === 0) {
+    mensaje += "El valor acumulado es cero";
+    } else if (suma > 0) {
+    mensaje += "El valor acumulado es mayor a cero.";
+    } else {
+    mensaje += "El valor acumulado es menor a cero.";
+    }
+    alert(mensaje);
+}
+</script>
+</body>
+</html>

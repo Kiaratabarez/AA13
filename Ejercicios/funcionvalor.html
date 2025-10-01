@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Funcion valor</title>
+</head>
+<body>
+<button onclick="ejercicioRetor()">Ejecutar</button>
+
+<script>
+function mayorDeTres(a, b, c) {
+    let mayor = a;
+    if (b > mayor) {
+    mayor = b;
+    }
+    if (c > mayor) {
+    mayor = c;
+    }
+    return mayor; 
+}
+function ejercicioRetor() {
+    let num1 = parseInt(prompt("Ingrese el primer número:"));
+    let num2 = parseInt(prompt("Ingrese el segundo número:"));
+    let num3 = parseInt(prompt("Ingrese el tercer número:"));
+
+    let mayor = mayorDeTres(num1, num2, num3);
+
+    alert("El mayor de los tres números es: " + mayor);
+}
+</script>
+</body>
+</html>

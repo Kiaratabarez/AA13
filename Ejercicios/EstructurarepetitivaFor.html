@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>"Estructura Repetitiva"</title>
+</head>
+<body>
+<button onclick="ejercicio2()">Ejecutar</button>
+<script>
+function ejercicio2() {
+    let numeros = [];
+    for (let i = 1; i <= 10; i++) {
+    let num = parseInt(prompt("Ingrese el número " + i));
+    numeros.push(num);
+    }
+    let suma = 0;
+    for (let i = 5; i < 10; i++) { 
+    suma += numeros[i];
+    }
+    alert("Los últimos 5 números son: " + 
+        numeros.slice(5).join(", ") + 
+        "\nLa suma es: " + suma);
+}
+</script>
+</body>
+</html>

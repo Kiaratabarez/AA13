@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicios Acumulador</title>
+</head>
+<body>
+<script>
+function ejercicio1() {
+    let mayores = 0, menores = 0;
+    for (let i = 1; i <= 10; i++) {
+    let nota = parseInt(prompt("Ingrese la nota " + i));
+    if (nota >= 7) {
+        mayores++;
+    } else {
+        menores++;
+    }
+    }
+    alert("Notas >= 7: " + mayores + "\nNotas menores a 7: " + menores);
+}
