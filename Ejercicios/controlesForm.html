@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Controles FORM, BUTTON y TEXT</title>
+</head>
+<body>
+
+<form>
+<label for="numero">Ingrese un número:</label>
+<input type="text" id="numero">
+<button type="button" onclick="elevarCubo()">Calcular Cubo</button>
+</form>
+
+<script>
+function elevarCubo() {
+    let valor = document.getElementById("numero").value;
+    let num = parseFloat(valor);
+    let cubo = Math.pow(num, 3);
+    alert("El número " + num + " elevado al cubo es: " + cubo);
+}
+</script>
+</body>
+</html>

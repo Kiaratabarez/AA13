@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Control RADIO</title>
+</head>
+<body>
+<form>
+<input type="radio" name="edad" id="mayor"> Soy mayor de 18 años <br>
+<input type="radio" name="edad" id="menor"> Soy menor de 18 años <br><br>
+<button type="button" onclick="verificarEdad()">Verificar</button>
+</form>
+
+<script>
+function verificarEdad() {
+    let mayor = document.getElementById("mayor").checked;
+    let menor = document.getElementById("menor").checked;
+
+    if (mayor) {
+    alert("Puede ingresar al sitio.");
+    } else if (menor) {
+    alert("No puede ingresar al sitio.");
+    } else {
+    alert("Debe seleccionar una opción.");
+    }
+}
+</script>
+</body>
+</html>

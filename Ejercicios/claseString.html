@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>clase String 1</title>
+</head>
+<body>
+<button onclick="ingresarNom()">Comenzar</button>
+
+<script>
+function ingresarNom() {
+    let contador = 0;
+    let nombre;
+
+    do {
+    nombre = prompt("Ingrese un nombre (escriba 'fin' para terminar):");
+    if (nombre !== null && nombre.toLowerCase() !== "fin") {
+        contador++;
+    }
+    } while (nombre !== null && nombre.toLowerCase() !== "fin");
+
+    alert("Se ingresaron " + contador + " nombres.");
+}
+</script>
+</body>
+</html>

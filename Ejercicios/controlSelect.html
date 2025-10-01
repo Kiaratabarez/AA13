@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Control SELECT </title>
+</head>
+<body>
+<form>
+<label for="pizza">Tipo de pizza:</label>
+<select id="pizza" onchange="mostrarPrecio()">
+    <option value="">-- Seleccione --</option>
+    <option value="jamon">Jamón y Queso</option>
+    <option value="muzza">Muzzarella</option>
+    <option value="morrones">Morrones</option>
+</select>
+<br><br>
+
+<label for="precio">Precio:</label>
+<input type="text" id="precio" readonly>
+</form>
+
+<script>
+function mostrarPrecio() {
+    let seleccion = document.getElementById("pizza").value;
+    let precio = "";
+
+    if (seleccion === "jamon") {
+    precio = "$2500";
+    } else if (seleccion === "muzza") {
+    precio = "$2200";
+    } else if (seleccion === "morrones") {
+    precio = "$2700";
+    }
+
+    document.getElementById("precio").value = precio;
+}
+</script>
+</body>
+</html>

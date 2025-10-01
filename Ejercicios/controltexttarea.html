@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Control TEXTAREA </title>
+</head>
+<body>
+
+<form>
+<label for="nombre">Nombre:</label><br>
+<input type="text" id="nombre"><br><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email"><br><br>
+<label for="comentarios">Comentarios:</label><br>
+<textarea id="comentarios" rows="5" cols="40"></textarea><br><br>
+<button type="button" onclick="mostrarDatos()">Enviar</button>
+</form>
+
+<script>
+function mostrarDatos() {
+    let nombre = document.getElementById("nombre").value;
+    let email = document.getElementById("email").value;
+    let comentarios = document.getElementById("comentarios").value;
+    alert("Datos ingresados:\n\nNombre: " + nombre + 
+        "\nEmail: " + email + 
+        "\nComentarios: " + comentarios);
+}
+</script>
+</body>
+</html>
